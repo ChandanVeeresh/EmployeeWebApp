@@ -1,0 +1,27 @@
+﻿<Window x:Class="Employee.UpdateEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employee"
+        mc:Ignorable="d"
+        Title="UpdateEmployee" Height="450" Width="600">
+    <Grid>
+        <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" Margin="37,40,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label x:Name="MiddleName" Content="Middle Name" HorizontalAlignment="Left" Margin="37,70,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="37,100,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label x:Name="emailId" Content="Email Id" HorizontalAlignment="Left" Margin="37,130,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label x:Name="Status" Content="Status" HorizontalAlignment="Left" Margin="37,166,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label x:Name="empAddress" Content="Address" HorizontalAlignment="Left" Margin="37,200,0,0" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="firstName" HorizontalAlignment="Left" Height="23" Margin="309,40,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="{Binding Path=firstName}" Width="200"/>
+        <TextBox x:Name="middleName" HorizontalAlignment="Left" Height="23" Margin="309,70,0,0" TextWrapping="Wrap" Text="{Binding Path=middleName}" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="lastName" HorizontalAlignment="Left" Height="23" Margin="309,100,0,0" TextWrapping="Wrap" Text="{Binding Path=lastName}" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="309,133,0,0" TextWrapping="Wrap" Text="{Binding Path=email}" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="Address" HorizontalAlignment="Left" Height="85" Margin="309,200,0,0" TextWrapping="Wrap" Text="{Binding Path=emp_Address}" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="Update_Employee" Content="Update" HorizontalAlignment="Left" Margin="88,328,0,0" VerticalAlignment="Top" Width="169" Height="47" Command="{Binding UpdateBtn}" />
+        <Button x:Name="Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="309,328,0,0" VerticalAlignment="Top" Width="200" Height="47" Click="Cancel_Click"/>
+        <RadioButton x:Name="Activate" Content="Activate" HorizontalAlignment="Left" Margin="309,173,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Deactivate" Content="Deactivate" HorizontalAlignment="Left" Margin="412,173,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

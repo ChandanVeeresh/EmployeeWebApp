@@ -1,0 +1,31 @@
+﻿<Window x:Class="Employee.EditEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employee"
+        mc:Ignorable="d"
+        Title="EditEmployee" Height="400" Width="1100">
+    <Grid>
+        <DataGrid x:Name="EmployeeGrid" HorizontalAlignment="Left" Margin="47,26,0,0" VerticalAlignment="Top" Height="303" Width="720" AutoGenerateColumns="False" ItemsSource="{Binding Path=EmployeeList}" SelectedItem="{Binding Path=SelectedEmployee}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Employee Id" Binding="{Binding Path=EmployeeID}" Width="80"/>
+                <DataGridTextColumn Header="First Name"  Binding="{Binding Path=FirstName}" Width="80"/>
+                <DataGridTextColumn Header="Middle Name" Binding="{Binding Path=MiddleName}" Width="100"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding Path=LastName}" Width="100"/>
+
+                <DataGridTextColumn Header="Email" Binding="{Binding Path=Email}" Width="120"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Path=Emp_Adress}" Width="180" />
+
+                <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}" Width="100"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Edit" Content="Edit Info" HorizontalAlignment="Left" Margin="848,69,0,0" VerticalAlignment="Top" Width="163" Height="42" Command="{Binding UpdateEmployeeBtn}"/>
+        <Button x:Name="Delete" Content="Delete" HorizontalAlignment="Left" Margin="848,130,0,0" VerticalAlignment="Top" Width="163" Height="37" Command="{Binding DeleteEmployeeBtn}"/>
+        <Button x:Name="Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="848,194,0,0" VerticalAlignment="Top" Width="163" Height="39" Click="Cancel_Click"/>
+
+
+    </Grid>
+</Window>
